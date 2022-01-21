@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="free"></div>
+    <div id="calculator">
+      <table>
+        <tr>
+          <td id="textbox" colspan="5">0</td>
+        </tr>
+
+        <tr>
+          <td class="btn op" id="7">7</td>
+          <td class="btn op" id="8">8</td>
+          <td class="btn op" id="9">9</td>
+          <td id="allClear" class="btn result">AC</td>
+          <td id="backspace" class="btn result">
+            <i class="btn fas fa-backspace"></i>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="btn op" id="4">4</td>
+          <td class="btn op" id="5">5</td>
+          <td class="btn op" id="6">6</td>
+          <td class="btn op" id="*">*</td>
+          <td class="btn op" id="/">/</td>
+        </tr>
+
+        <tr>
+          <td class="btn op" id="1">1</td>
+          <td class="btn op" id="2">2</td>
+          <td class="btn op" id="3">3</td>
+          <td class="btn op" id="+">+</td>
+          <td class="btn op" id="-">-</td>
+        </tr>
+
+        <tr>
+          <td class="btn op" id="0">0</td>
+          <td class="btn op" id=".">.</td>
+          <td class="btn result" id="eq" colspan="3">=</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="free"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
