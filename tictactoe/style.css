@@ -15,7 +15,13 @@ body {
 
 h1 {
   font-size: 54px;
+  margin-top: 8%;
+  margin-bottom: 0.8%;
   text-transform: uppercase;
+}
+
+.multi {
+  margin-top: 0;
 }
 
 .container {
@@ -32,6 +38,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   margin: 40px;
+  height: 500px;
 }
 
 .box {

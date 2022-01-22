@@ -6,4 +6,4 @@
 4. Analog Clock
 5. Typing Test
 
-**Check them out [here](index.html)**
+**Check them out [here](https://prtvi.github.io/javascript-projects/index.html)**
