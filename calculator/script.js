@@ -30,7 +30,7 @@ const equateFunction = function () {
     const res = eval(expression);
     let decimal = res - Math.floor(res) !== 0;
 
-    if (decimal) textBox.textContent = res.toPrecision(4);
+    if (decimal) textBox.textContent = res.toFixed(4);
     else textBox.textContent = res;
   } catch (err) {
     textBox.textContent = "Error..";

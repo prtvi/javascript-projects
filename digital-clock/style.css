@@ -8,6 +8,7 @@ html {
 * {
   box-sizing: border-box;
 }
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -15,6 +16,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 #clock {
   font-family: "Orbitron", sans-serif;
   font-size: 15vw;

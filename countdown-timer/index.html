@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Countdown Timer</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div id="clock">
+        <p id="time">00:00:00</p>
+      </div>
+    </section>
+
+    <!-- input -->
+    <section class="input">
+      <div class="input-component">
+        <label for="hours" class="input-label">Hours</label>
+        <input type="number" class="input-number" placeholder="0" id="hours" />
+      </div>
+
+      <div class="input-component">
+        <label for="minutes" class="input-label">Minutes</label>
+        <input
+          type="number"
+          class="input-number"
+          placeholder="0"
+          id="minutes"
+        />
+      </div>
+
+      <div class="input-component">
+        <label for="seconds" class="input-label">Seconds</label>
+        <input
+          type="number"
+          class="input-number"
+          placeholder="0"
+          id="seconds"
+        />
+      </div>
+
+      <button class="btn btn-start">Start Timer!</button>
+      <button class="btn btn-reset">Reset</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

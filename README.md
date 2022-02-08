@@ -5,5 +5,6 @@
 3. Calculator
 4. Analog Clock
 5. Typing Test
+6. Countdown Timer
 
-**Check them out [here](https://prtvi.github.io/javascript-projects/index.html)**
+<h3> Check them out <a href="https://prtvi.github.io/javascript-projects/index.html" target="_blank">here</a>.</h3>
