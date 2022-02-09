@@ -37,7 +37,7 @@ h1 {
 
 .container-display-image {
   display: inline;
-  margin: 2%;
+  margin: 2% 2% 2% 10%;
   float: left;
 }
 
@@ -64,7 +64,7 @@ h1 {
   border-radius: 5px;
   width: fit-content;
   height: fit-content;
-  padding: 0 10px;
+  padding: 5px 10px;
   display: block;
   margin: 0px auto 0px auto;
 }
@@ -80,8 +80,8 @@ h1 {
 }
 
 .result-color {
-  font-size: 1.2rem;
-  margin: 8% 2% 8% 2%;
+  font-size: 1.5rem;
+  margin: 3%;
 }
 
 .copied {

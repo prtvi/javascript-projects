@@ -41,7 +41,7 @@ resultColor.addEventListener("click", function (e) {
 
   setTimeout(function (e) {
     copied.classList.add("hidden");
-  }, 2500);
+  }, 2000);
 });
 
 inputImageUpload.addEventListener("change", function () {

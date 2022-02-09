@@ -58,7 +58,7 @@ const extractInputAndUpdateJoke = function () {
   const firstName = inputFirstName.value || "Chuck";
   const lastName = inputLastName.value || "Norris";
 
-  const url = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
+  const url = `https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
 
   updateJoke(url);
   refreshBtns(btns);
