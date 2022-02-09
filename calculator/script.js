@@ -11,6 +11,7 @@ const equate = document.getElementById("Enter");
 textBox.textContent = "0";
 let expression = "";
 
+// clear the entire expression
 const allClearFunction = function () {
   expression = "";
   textBox.textContent = "0";
@@ -23,6 +24,7 @@ const backspaceFunction = function () {
   textBox.textContent = expression;
 };
 
+// equate function (on pressing =), checks if errors in expression and evaluates it
 const equateFunction = function () {
   try {
     if (expression[0] === "0") expression = expression.slice(1);
@@ -37,6 +39,8 @@ const equateFunction = function () {
   }
   expression = "";
 };
+
+// EVENT HANDLERS
 
 // click event handlers for operands and operators
 for (let i = 0; i < ops.length; i++) {
@@ -60,6 +64,7 @@ document.body.addEventListener("keydown", function (e) {
   if (e.key === "Delete") allClearFunction();
 });
 
+// click event handlers
 allClear.addEventListener("click", allClearFunction);
 backspace.addEventListener("click", backspaceFunction);
 equate.addEventListener("click", equateFunction);

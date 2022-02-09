@@ -11,12 +11,12 @@ html {
 }
 
 #clock {
-  font-size: 15vw;
+  font-size: 10vw;
   color: #f8f8d3;
 }
 
 #time {
-  margin: 10%;
+  margin: 80px auto 60px auto;
 }
 
 /* input */

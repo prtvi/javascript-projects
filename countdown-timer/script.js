@@ -9,6 +9,7 @@ const inputSeconds = document.getElementById("seconds");
 const btnStart = document.querySelector(".btn-start");
 const btnReset = document.querySelector(".btn-reset");
 
+// get future time to which the timer will expire to, if any arg is "" then that arg is set to the same
 const getFutureTime = function (now, hour, min, sec) {
   const future = new Date();
 
@@ -26,6 +27,7 @@ const getFutureTime = function (now, hour, min, sec) {
 
 const padTime = (t) => String(t).padStart(2, 0);
 
+// formatting the time when hours is 0
 const formatWOHours = function (hours, minutes, seconds) {
   if (hours === 0) return `${padTime(minutes)}:${padTime(seconds)}`;
   else if (hours === -1) {
@@ -36,6 +38,7 @@ const formatWOHours = function (hours, minutes, seconds) {
   return `${padTime(hours)}:${padTime(minutes)}:${padTime(seconds)}`;
 };
 
+// formatting the remaining time
 const formatTime = function (distance) {
   const [hours, minutes, seconds] = [
     Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
@@ -61,6 +64,8 @@ const timerCallback = function (future) {
 
   time.textContent = formatTime(distance);
 };
+
+// EVENT HANDLERS
 
 btnStart.addEventListener("click", function (e) {
   if (!btnOn) {
