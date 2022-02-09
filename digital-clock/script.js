@@ -1,4 +1,5 @@
 "use strict";
+
 const time = document.getElementById("time");
 
 const getTime = function () {

@@ -1,3 +1,5 @@
+"use strict";
+
 const btnJoke = document.querySelector(".btnJoke");
 const jokeText = document.querySelector(".jokeText");
 

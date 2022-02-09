@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Picker</title>
+  </head>
+
+  <body>
+    <h1>Color Picker</h1>
+
+    <div class="container container-upload-image">
+      <p class="p-upload-image">Upload an image:</p>
+      <input type="file" class="input-image-upload" accept="image/*" />
+    </div>
+
+    <div class="container container-display-image hidden">
+      <img class="image" src="" alt="uploaded image" />
+    </div>
+
+    <div class="container container-open-picker">
+      <button class="btn btn-open-color-picker">Open color picker</button>
+      <p class="result-color"></p>
+      <p class="copied hidden">Copied!</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
