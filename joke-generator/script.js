@@ -1,14 +1,14 @@
 "use strict";
 
-const btnJoke = document.querySelector(".btnJoke");
+const btnGetJoke = document.querySelector(".btnJoke");
 const jokeText = document.querySelector(".jokeText");
 
 const inputFirstName = document.getElementById("firstName");
 const inputLastName = document.getElementById("lastName");
 
-const btnCelebs = document.querySelectorAll(".btnCharacters");
+const btnCharacters = document.querySelectorAll(".btnCharacters");
 
-const btns = Array.from(btnCelebs);
+const btns = Array.from(btnCharacters);
 
 const celebrities = [
   "Ryan Reynolds",
@@ -66,16 +66,15 @@ const extractInputAndUpdateJoke = function () {
 
 // EVENT HANDLERS
 
-// adding event listeners to character btns and updating joke on input change
+// adding event listeners to character btns to update input fields
 btns.forEach(function (ele) {
   ele.addEventListener("click", function (e) {
     [inputFirstName.value, inputLastName.value] = ele.textContent.split(" ");
-    extractInputAndUpdateJoke();
   });
 });
 
 // update joke on UI
-btnJoke.addEventListener("click", function (e) {
+btnGetJoke.addEventListener("click", function (e) {
   e.preventDefault();
   extractInputAndUpdateJoke();
 });

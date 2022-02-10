@@ -72,7 +72,8 @@ h1 {
 .btnCharacters {
   background-color: #202020;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
+  transform: scale(0.9);
 }
 
 .jokeText {
@@ -84,4 +85,24 @@ h1 {
 
 .bottom {
   margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-container {
+    display: block;
+    font-size: 1.1rem;
+    margin: 2%;
+  }
+
+  .image {
+    width: 60%;
+  }
+
+  .bottom {
+    margin-top: 5%;
+  }
+
+  .btnJoke {
+    margin-top: 5%;
+  }
 }
