@@ -33,15 +33,23 @@ const celebrities = [
   "Steve Jobs",
 ];
 
-// fetch joke and update it in UI
-const updateJoke = function (url) {
-  fetch(url)
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (data) {
-      jokeText.innerHTML = data.value.joke;
-    });
+// fetch joke and update it on UI
+
+// const updateJoke = function (url) {
+//   fetch(url)
+//     .then(function (res) {
+//       return res.json();
+//     })
+//     .then(function (data) {
+//       jokeText.innerHTML = data.value.joke;
+//     });
+// };
+
+const updateJoke = async function (url) {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  jokeText.innerHTML = data.value.joke;
 };
 
 const getRandomName = (arr) => arr[Math.floor(Math.random() * arr.length)];
