@@ -95,7 +95,7 @@ btnStart.addEventListener("click", function (e) {
 });
 
 const reset = function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   inputHours.value = inputMinutes.value = inputSeconds.value = "";
   time.textContent = "00:00:00";
 
