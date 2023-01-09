@@ -1,108 +1,109 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Redressed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Redressed&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Exo 2", sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Exo 2', sans-serif;
 }
 
 body {
-  background-color: rgb(254, 184, 28);
+	background-color: rgb(254, 184, 28);
 }
 
 .container {
-  text-align: center;
-  margin: 1%;
+	text-align: center;
+	margin: 1%;
+	margin-top: 60px;
 }
 
 h1 {
-  margin-top: 0.5%;
-  margin-bottom: 2%;
+	margin-top: 0.5%;
+	margin-bottom: 2%;
 }
 
 .image {
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  display: block;
-  margin-bottom: 1%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	display: block;
+	margin-bottom: 1%;
 }
 
 .input-container {
-  display: inline;
-  font-size: 1.1rem;
-  margin: 2%;
+	display: inline;
+	font-size: 1.1rem;
+	margin: 2%;
 }
 
 .input {
-  line-height: 25px;
-  font-size: 1.05rem;
+	line-height: 25px;
+	font-size: 1.05rem;
 }
 
 .btn:hover {
-  background-color: #daa520;
-  color: #000;
-  border: 2px solid #000;
-  cursor: pointer;
+	background-color: #daa520;
+	color: #000;
+	border: 2px solid #000;
+	cursor: pointer;
 }
 
 .btn:active {
-  transform: translateY(4px);
+	transform: translateY(4px);
 }
 
 .btn {
-  width: fit-content;
-  padding: 0px 10px;
-  height: 40px;
-  margin: 1%;
-  border: 2px solid #fff;
+	width: fit-content;
+	padding: 0px 10px;
+	height: 40px;
+	margin: 1%;
+	border: 2px solid #fff;
 }
 
 .btnJoke {
-  background-color: rgb(8, 14, 19);
-  color: #fff;
-  display: block;
-  margin: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.1rem;
-  border-radius: 7px;
+	background-color: rgb(8, 14, 19);
+	color: #fff;
+	display: block;
+	margin: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.1rem;
+	border-radius: 7px;
 }
 
 .btnCharacters {
-  background-color: #202020;
-  color: #fff;
-  border-radius: 15px;
-  transform: scale(0.9);
+	background-color: #202020;
+	color: #fff;
+	border-radius: 15px;
+	transform: scale(0.9);
 }
 
 .jokeText {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.2rem;
-  margin-bottom: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2rem;
+	margin-bottom: 3%;
 }
 
 .bottom {
-  margin-bottom: 2%;
+	margin-bottom: 2%;
 }
 
 @media only screen and (max-width: 600px) {
-  .input-container {
-    display: block;
-    font-size: 1.1rem;
-    margin: 2%;
-  }
+	.input-container {
+		display: block;
+		font-size: 1.1rem;
+		margin: 2%;
+	}
 
-  .image {
-    width: 60%;
-  }
+	.image {
+		width: 60%;
+	}
 
-  .bottom {
-    margin-top: 5%;
-  }
+	.bottom {
+		margin-top: 5%;
+	}
 
-  .btnJoke {
-    margin-top: 5%;
-  }
+	.btnJoke {
+		margin-top: 5%;
+	}
 }

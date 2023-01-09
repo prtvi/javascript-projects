@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+
+		<link rel="stylesheet" href="./style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<section>
+			<h1>Weather App</h1>
+
+			<div class="form-container">
+				<form action="">
+					<div>
+						<label class="form-input-label" for="input-city-name"
+							>Enter city name:</label
+						>
+						<input
+							class="form-input"
+							type="text"
+							id="input-city-name"
+							placeholder="Enter your city name"
+							name="cityName"
+							autofocus
+							autocomplete="off"
+							value="bangalore"
+						/>
+					</div>
+
+					<div>
+						<input
+							class="form-input"
+							type="checkbox"
+							value=""
+							name="latlng"
+							id="input-location-access"
+						/>
+						<label class="form-input-label" for="input-location-access"
+							>Or check this box to use your current location</label
+						>
+					</div>
+
+					<button class="btn" type="submit" disabled>Get weather</button>
+				</form>
+			</div>
+		</section>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
