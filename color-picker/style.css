@@ -1,34 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #f0f8ff;
+	background-color: #202124;
+	color: #d4d4c9;
+	margin: 40px;
 }
 
 h1 {
-  margin: 3% 0px 1% 0px;
-  padding-left: 10%;
+	font-size: 48px;
+	margin: 4% 0 1% 0;
+	padding-left: 10%;
 }
 
 /* container-upload-image */
 
 .container-upload-image {
-  margin: 2% auto 2% auto;
-  text-align: center;
-  font-size: 1.1rem;
+	margin: 2% auto 1% auto;
+	text-align: center;
+	font-size: 1.1rem;
+	width: inherit;
 }
 
-.p-upload-image {
-  display: inline;
+.container-upload-image div {
+	margin: 0 auto;
+	width: fit-content;
+	font-size: 20px;
 }
 
-.input-image-upload {
-  width: 30%;
+.container-upload-image label {
+	display: inline;
+}
+
+.input-image {
+	width: 30%;
+}
+
+.or {
+	margin: 30px 0 30px 0;
 }
 
 /* container-upload-image */
@@ -36,14 +48,14 @@ h1 {
 /* container-display-image */
 
 .container-display-image {
-  display: inline;
-  margin: 2% 2% 2% 10%;
-  float: left;
+	display: inline;
+	float: left;
+	width: 60%;
 }
 
-.image {
-  width: 80%;
-  float: right;
+.display-image {
+	width: 100%;
+	float: right;
 }
 
 /* container-display-image */
@@ -51,55 +63,62 @@ h1 {
 /* container-open-picker */
 
 .container-open-picker {
-  width: 30%;
-  display: inline;
-  text-align: center;
-  margin: 2% 4px 2% 4%;
+	width: 35%;
+	display: inline;
+	text-align: center;
 }
 
 .btn {
-  font-size: 1.1rem;
-  background-color: #00bfff;
-  border: 2px solid #00bfff;
-  border-radius: 5px;
-  width: fit-content;
-  height: fit-content;
-  padding: 5px 10px;
-  display: block;
-  margin: 0px auto 0px auto;
+	font-size: 1.1rem;
+	background-color: #00bfff;
+	border: 2px solid #00bfff;
+	border-radius: 5px;
+	width: fit-content;
+	height: fit-content;
+	padding: 5px 10px;
+	display: block;
+	margin: 0px auto 0px auto;
 }
 
 .btn:hover {
-  background-color: #1e90ff;
-  border: 2px solid #1e90ff;
-  cursor: pointer;
+	background-color: #1e90ff;
+	border: 2px solid #1e90ff;
+	cursor: pointer;
 }
 
 .btn:active {
-  transform: translateY(2px);
+	transform: translateY(2px);
+}
+
+.color-bg {
+	border: 1px solid white;
+	margin: 5% auto 5% auto;
+	width: 30%;
 }
 
 .result-color {
-  font-size: 1.5rem;
-  margin: 3%;
+	font-size: 1.5rem;
+	margin: 3%;
 }
 
 .copied {
-  background-color: #00bfff;
-  border-radius: 5px;
-  width: fit-content;
-  height: fit-content;
-  padding: 0 10px;
-  margin: 2% auto 2% auto;
+	background-color: #00bfff;
+	border-radius: 5px;
+	width: fit-content;
+	height: fit-content;
+	padding: 0 10px;
+	margin: 2% auto 2% auto;
+	color: #202124;
+}
+
+.result-color:hover {
+	color: #fff;
+	cursor: pointer;
 }
 
 /* container-open-picker */
 
 /* psuedo classes */
 .hidden {
-  display: none;
-}
-
-.container-open-picker-float-left {
-  float: left;
+	display: none;
 }

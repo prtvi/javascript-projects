@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Color Picker</title>
-  </head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+			rel="stylesheet"
+		/>
 
-  <body>
-    <h1>Color Picker</h1>
+		<link rel="stylesheet" href="style.css" />
+		<title>Color Picker</title>
+	</head>
 
-    <div class="container container-upload-image">
-      <p class="p-upload-image">Upload an image:</p>
-      <input type="file" class="input-image-upload" accept="image/*" />
-    </div>
+	<body>
+		<h1>Color Picker</h1>
 
-    <div class="container container-display-image hidden">
-      <img class="image" src="" alt="uploaded image" />
-    </div>
+		<div class="container-upload-image">
+			<div>
+				<label for="input-image">Upload an image:</label>
+				<input
+					type="file"
+					class="input-image"
+					id="input-image"
+					accept="image/*"
+				/>
+			</div>
+			<p class="or">OR</p>
+		</div>
 
-    <div class="container container-open-picker">
-      <button class="btn btn-open-color-picker">Open color picker</button>
-      <p class="result-color" title="Click to copy"></p>
-      <p class="copied hidden">Copied!</p>
-    </div>
+		<div class="container-display-image hidden">
+			<img class="display-image" src="" alt="uploaded image" />
+		</div>
 
-    <script src="script.js"></script>
-  </body>
+		<div class="container-open-picker">
+			<button class="btn">Open color picker</button>
+
+			<div class="color-bg hidden">
+				<p class="result-color hex" title="Click to copy"></p>
+				<p class="result-color rgb" title="Click to copy"></p>
+			</div>
+
+			<p class="copied hidden">Copied!</p>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
 </html>
