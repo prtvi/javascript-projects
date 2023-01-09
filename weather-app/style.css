@@ -1,6 +1,6 @@
 :root {
-	--background-color: #1e1e1e;
-	--font-color: #d4d4c9;
+	--bg: #202124;
+	--text: #d4d4c9;
 }
 
 * {
@@ -8,8 +8,8 @@
 }
 
 html {
-	background: var(--background-color);
-	color: var(--font-color);
+	background: var(--bg);
+	color: var(--text);
 }
 
 section {
@@ -40,12 +40,14 @@ input[type='checkbox'] {
 
 .btn {
 	padding: 6px;
-	border-radius: 5px;
+	border-radius: 8px;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
 }
 
 td,
 th {
-	/* border: 1px solid white; */
 	font-size: 20px;
 	padding: 10px;
 	text-align: center;

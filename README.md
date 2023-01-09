@@ -1,6 +1,6 @@
 # JavaScript projects
 
-<h3> Check them out <a href="https://prtvi.github.io/javascript-projects/index.html" target="_blank">here</a>.</h3>
+<h3> Check them out <a href="https://prtvi.github.io/javascript-projects/index.html" target="_blank">here</a></h3>
 
 | #   | Project         | Live Demo                                                                           |
 | --- | --------------- | ----------------------------------------------------------------------------------- |
@@ -12,3 +12,4 @@
 | 6   | Countdown Timer | [Live Demo](https://prtvi.github.io/javascript-projects/countdown-timer/index.html) |
 | 7   | Joke Generator  | [Live Demo](https://prtvi.github.io/javascript-projects/joke-generator/index.html)  |
 | 8   | Color Picker    | [Live Demo](https://prtvi.github.io/javascript-projects/color-picker/index.html)    |
+| 9   | Weather App     | [Live Demo](https://prtvi.github.io/javascript-projects/weather-app/index.html)     |

@@ -1,69 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Orbitron&display=swap");
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+			rel="stylesheet"
+		/>
 
-      body {
-        font-family: "Fira Code", monospace;
-        font-size: 120%;
-        background-color: #ffffff;
-      }
+		<style>
+			:root {
+				--bg: #202124;
+				--text: #d4d4c9;
+			}
 
-      .heading {
-        margin: 5%;
-      }
+			* {
+				font-family: 'Poppins', sans-serif;
+			}
 
-      .list {
-        margin: 5%;
-        list-style-type: none;
-      }
+			body {
+				font-size: 140%;
+				background-color: var(--bg);
+				color: var(--text);
+			}
 
-      .list-item {
-        margin: 2%;
-      }
+			.heading {
+				margin: 5%;
+			}
 
-      .list-item a {
-        text-decoration: none;
-      }
-    </style>
+			.list {
+				margin: 5%;
+			}
 
-    <title>JavaScript Projects</title>
-  </head>
-  <body>
-    <h1 class="heading">JavaScript Projects</h1>
+			.list-item {
+				margin: 2%;
+			}
 
-    <div class="container">
-      <ul class="list">
-        <li class="list-item">
-          <a href="tictactoe/index.html"> Tic-Tac-Toe </a>
-        </li>
-        <li class="list-item">
-          <a href="digital-clock/index.html"> Digital clock </a>
-        </li>
-        <li class="list-item">
-          <a href="calculator/index.html"> Calculator </a>
-        </li>
-        <li class="list-item">
-          <a href="analog-clock/index.html"> Analog clock </a>
-        </li>
-        <li class="list-item">
-          <a href="typing-test/index.html"> Typing Test </a>
-        </li>
-        <li class="list-item">
-          <a href="countdown-timer/index.html"> Countdown Timer </a>
-        </li>
-        <li class="list-item">
-          <a href="joke-generator/index.html"> Joke Generator </a>
-        </li>
-        <li class="list-item">
-          <a href="color-picker/index.html"> Color Picker </a>
-        </li>
-      </ul>
-    </div>
-  </body>
+			.list-item a {
+				color: var(--text);
+				text-decoration: none;
+			}
+
+			.list-item a:hover {
+				color: #ffffff;
+			}
+		</style>
+
+		<title>JavaScript Projects</title>
+	</head>
+	<body>
+		<h1 class="heading">JavaScript Projects</h1>
+
+		<div class="container">
+			<ol class="list">
+				<li class="list-item">
+					<a href="tictactoe/index.html"> Tic-Tac-Toe </a>
+				</li>
+				<li class="list-item">
+					<a href="digital-clock/index.html"> Digital clock </a>
+				</li>
+				<li class="list-item">
+					<a href="calculator/index.html"> Calculator </a>
+				</li>
+				<li class="list-item">
+					<a href="analog-clock/index.html"> Analog clock </a>
+				</li>
+				<li class="list-item">
+					<a href="typing-test/index.html"> Typing Test </a>
+				</li>
+				<li class="list-item">
+					<a href="countdown-timer/index.html"> Countdown Timer </a>
+				</li>
+				<li class="list-item">
+					<a href="joke-generator/index.html"> Joke Generator </a>
+				</li>
+				<li class="list-item">
+					<a href="color-picker/index.html"> Color Picker </a>
+				</li>
+				<li class="list-item">
+					<a href="weather-app/index.html"> Weather App </a>
+				</li>
+			</ol>
+		</div>
+	</body>
 </html>
