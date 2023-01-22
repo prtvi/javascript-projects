@@ -7,7 +7,7 @@
 :root {
 	--test: 1px solid white;
 	--bg: #202124;
-	--text-color: grey;
+	--text-color: #808080;
 }
 
 body {
@@ -47,7 +47,7 @@ input[type='radio'] {
 	cursor: pointer;
 }
 
-label {
+.optns div label {
 	font-size: 25px;
 }
 
@@ -75,4 +75,99 @@ div.submit {
 	right: 0;
 	text-align: center;
 	transition: 0.5s ease;
+}
+
+img {
+	display: none;
+	float: right;
+	position: absolute;
+	left: 95%;
+	top: 25px;
+	cursor: pointer;
+}
+
+/* modal */
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: whitesmoke;
+	color: #000;
+	margin: 15% auto;
+	padding: 30px 50px 30px 50px;
+	border: 1px solid #888;
+	width: 75%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* modal content */
+
+.modal-content h2 {
+	margin-bottom: 30px;
+}
+
+.modal-form div {
+	margin-bottom: 15px;
+	margin-left: 15px;
+}
+
+.modal-form input[type='text'] {
+	width: 30%;
+	padding: 3px;
+	margin-right: 20px;
+}
+
+.modal-form div label {
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.copy-url {
+	margin-top: 30px;
+}
+
+.btn-modal {
+	padding: 10px;
+	border: none;
+	border-radius: 3px;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: greenyellow;
+	cursor: pointer;
+}
+
+.btn-modal:active {
+	transform: translateY(2px);
+}
+
+span.info {
+	color: #888;
+}
+
+#url {
+	pointer-events: none;
 }

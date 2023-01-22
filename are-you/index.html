@@ -16,7 +16,54 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<!-- modal -->
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+
+				<h2>Set up your own custom prank</h2>
+
+				<div class="modal-form">
+					<div>
+						<label for="subjectModal">Subject</label>
+						<input type="text" placeholder="stupid" id="subjectModal" />
+						<span class="info">Are you (subject)?</span>
+					</div>
+
+					<div>
+						<label>Answer</label>
+
+						<input type="radio" name="ans" id="yesModal" value="yes" checked />
+						<label for="yesModal">Yes</label>
+						<input type="radio" name="ans" id="noModal" value="no" />
+						<label for="noModal">No</label>
+					</div>
+
+					<div>
+						<label for="message">Message on submission</label>
+						<input
+							type="text"
+							id="message"
+							placeholder="Thank for submitting!"
+						/>
+					</div>
+
+					<div class="copy-url">
+						<input
+							type="text"
+							value="?q=stupid&a=yes&m=Thanks for submitting!"
+							id="url"
+						/>
+						<button class="btn-modal">Copy URL</button>
+						<span class="info">Send this URL to your friend to prank them</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="form-container">
+			<img src="equalizer.png" alt="equalizer icon" />
+
 			<div class="form">
 				<div class="q">
 					<h1>Are you <span>q</span>?</h1>
