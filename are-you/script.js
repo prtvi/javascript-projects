@@ -86,11 +86,14 @@ const modalOpenEL = function () {
 		});
 	});
 
-	copyUrlBtn.addEventListener('click', () =>
+	copyUrlBtn.addEventListener('click', () => {
 		navigator.clipboard.writeText(
 			`https://prtvi.github.io/javascript-projects/are-you/index.html${url.value}`
-		)
-	);
+		);
+
+		copyUrlBtn.textContent = 'Copied!';
+		setTimeout(() => (copyUrlBtn.textContent = 'Copy URL'), 1500);
+	});
 };
 
 // add event listeners
@@ -112,7 +115,7 @@ btn.disabled = true;
 const [subject, ans, message] = getUrlParams();
 q.textContent = subject;
 
-//
+// validate device
 const userAgent = navigator.userAgent.toLowerCase();
 if (userAgent.includes('android') || userAgent.includes('mobile'))
 	form.innerHTML = `<h1>This page is best viewed on desktop/laptops</h1>`;
