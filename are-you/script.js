@@ -88,7 +88,9 @@ const modalOpenEL = function () {
 
 	copyUrlBtn.addEventListener('click', () => {
 		navigator.clipboard.writeText(
-			`https://prtvi.github.io/javascript-projects/are-you/index.html${url.value}`
+			encodeURI(
+				`https://prtvi.github.io/javascript-projects/are-you/index.html${url.value}`
+			)
 		);
 
 		copyUrlBtn.textContent = 'Copied!';
