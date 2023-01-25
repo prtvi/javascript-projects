@@ -13,4 +13,4 @@
 | 7   | Joke Generator  | [Live Demo](https://prtvi.github.io/javascript-projects/joke-generator/index.html)  |
 | 8   | Color Picker    | [Live Demo](https://prtvi.github.io/javascript-projects/color-picker/index.html)    |
 | 9   | Weather App     | [Live Demo](https://prtvi.github.io/javascript-projects/weather-app/index.html)     |
-| 10  | Are you ..?     | [Live Demo](https://prtvi.github.io/javascript-projects/are-you/index.html)         |
+| 10  | Question?       | [Live Demo](https://prtvi.github.io/javascript-projects/question/index.html)        |
