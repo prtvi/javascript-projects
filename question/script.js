@@ -103,7 +103,7 @@ const modalOpenEL = function () {
 	copyUrlBtn.addEventListener('click', () => {
 		navigator.clipboard.writeText(
 			encodeURI(
-				`https://prtvi.github.io/javascript-projects/are-you/index.html${url.value}`
+				`https://prtvi.github.io/javascript-projects/question/index.html${url.value}`
 			)
 		);
 
