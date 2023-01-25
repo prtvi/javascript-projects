@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Are you ...?</title>
+		<title>Question Question?</title>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,14 +20,13 @@
 		<div class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
-
-				<h2>Set up your own custom prank</h2>
+				<h2>Set up your own custom question</h2>
 
 				<div class="modal-form">
 					<div>
-						<label for="subjectModal">Subject</label>
-						<input type="text" placeholder="stupid" id="subjectModal" />
-						<span class="info">Are you (subject)?</span>
+						<label for="q">Question</label>
+						<input type="text" placeholder="Are you stupid" id="q" />
+						<span class="info">?</span>
 					</div>
 
 					<div>
@@ -37,21 +36,18 @@
 						<label for="yesModal">Yes</label>
 						<input type="radio" name="ans" id="noModal" value="no" />
 						<label for="noModal">No</label>
+						<span class="info">(what should be the answer)</span>
 					</div>
 
 					<div>
-						<label for="message">Message on submission</label>
-						<input
-							type="text"
-							id="message"
-							placeholder="Thank for submitting!"
-						/>
+						<label for="m">Message on submission</label>
+						<input type="text" id="m" placeholder="Hehe knew it!" />
 					</div>
 
 					<div class="copy-url">
 						<input
 							type="text"
-							value="?q=stupid&a=yes&m=Thanks for submitting!"
+							value="?q=Are you stupid&a=yes&m=Hehe knew it!"
 							id="url"
 						/>
 						<button class="btn-modal">Copy URL</button>
@@ -66,7 +62,7 @@
 
 			<div class="form">
 				<div class="q">
-					<h1>Are you <span>q</span>?</h1>
+					<h1><span>q</span>?</h1>
 				</div>
 
 				<div class="optns">
