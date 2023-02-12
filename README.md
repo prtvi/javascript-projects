@@ -15,3 +15,4 @@
 | 9   | Color Picker       | [Live Demo](https://prtvi.github.io/javascript-projects/color-picker/index.html)    |
 | 10  | Weather App        | [Live Demo](https://prtvi.github.io/javascript-projects/weather-app/index.html)     |
 | 11  | Question?          | [Live Demo](https://prtvi.github.io/javascript-projects/question/index.html)        |
+| 12  | 2048               | [Live Demo](https://prtvi.github.io/javascript-projects/2048/index.html)            |
