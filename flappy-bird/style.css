@@ -1,0 +1,48 @@
+:root {
+	--game-window-width: 450px;
+	--game-window-height: 700px;
+
+	--sky-height: 600px;
+	--ground-height: 100px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	height: var(--game-window-height);
+	width: var(--game-window-width);
+	position: relative;
+}
+
+.sky {
+	height: var(--sky-height);
+	width: var(--game-window-width);
+	background-image: url('assets/sky.png');
+}
+
+.ground {
+	height: var(--ground-height);
+	width: var(--game-window-width);
+	background-image: url('assets/bottom.png');
+}
+
+.bird {
+	background-image: url('assets/bird.png');
+	height: 45px;
+	width: 60px;
+	position: absolute;
+	z-index: 20;
+}
+
+.pipe {
+	background-image: url('assets/pipe.png');
+	position: absolute;
+	z-index: 20;
+}
+
+.pipe.top {
+	transform: scaleY(-1);
+}
