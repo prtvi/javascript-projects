@@ -11,10 +11,49 @@
 	padding: 0;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	background-color: #202124;
+	color: #d3d3d3;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.border-left h1 {
+	line-height: var(--game-window-height);
+	text-align: center;
+}
+
+.border-right p {
+	line-height: var(--game-window-height);
+	text-align: center;
+	font-size: 25px;
+}
+
+.border-left {
+	position: absolute;
+	background-color: #202124;
+	height: var(--game-window-height);
+	z-index: 30;
+	left: 0;
+	width: calc((100vw - var(--game-window-width)) / 2);
+}
+
+.border-right {
+	position: absolute;
+	background-color: #202124;
+	height: var(--game-window-height);
+	z-index: 30;
+	left: calc(var(--game-window-width) + (100vw - var(--game-window-width)) / 2);
+	width: calc((100vw - var(--game-window-width)) / 2);
+}
+
 .main {
 	height: var(--game-window-height);
 	width: var(--game-window-width);
 	position: relative;
+	left: calc((100vw - var(--game-window-width)) / 2);
 }
 
 .sky {
@@ -34,7 +73,7 @@
 	height: 45px;
 	width: 60px;
 	position: absolute;
-	z-index: 20;
+	z-index: 21;
 }
 
 .pipe {
@@ -45,4 +84,16 @@
 
 .pipe.top {
 	transform: scaleY(-1);
+}
+
+.overlay {
+	position: absolute;
+	top: 280px;
+	width: var(--game-window-width);
+	height: 40px;
+	z-index: 22;
+	text-align: center;
+	color: #000;
+	font-size: 20px;
+	display: none;
 }

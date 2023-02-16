@@ -5,13 +5,21 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 		<title>Flappy Bird</title>
 	</head>
 	<body>
+		<div class="border-left">
+			<h1>Flappy Bird 🐤</h1>
+		</div>
 		<div class="main">
 			<div class="bird"></div>
 			<div class="sky"></div>
+			<div class="overlay">Game over! Press enter to restart!</div>
 			<div class="ground"></div>
+		</div>
+		<div class="border-right">
+			<p>Score: <span class="score">0</span></p>
 		</div>
 
 		<script src="script.js"></script>
