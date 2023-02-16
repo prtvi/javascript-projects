@@ -16,3 +16,4 @@
 | 10  | Weather App        | [Live Demo](https://prtvi.github.io/javascript-projects/weather-app/index.html)     |
 | 11  | Question?          | [Live Demo](https://prtvi.github.io/javascript-projects/question/index.html)        |
 | 12  | 2048               | [Live Demo](https://prtvi.github.io/javascript-projects/2048/index.html)            |
+| 13  | Flappy Bird        | [Live Demo](https://prtvi.github.io/javascript-projects/flappy-bird/index.html)     |
