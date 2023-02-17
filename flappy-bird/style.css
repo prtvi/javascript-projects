@@ -18,24 +18,10 @@ body {
 	color: #d3d3d3;
 }
 
-.header {
-	width: var(--game-window-width);
-	margin: 40px auto;
-	text-align: center;
-}
-
-.header h1 {
-	margin-bottom: 10px;
-	font-size: 30px;
-}
-
-.header p {
-	font-size: 20px;
-}
-
 .main {
 	display: flex;
 	flex-direction: column;
+	padding-top: 20px;
 	overflow: hidden;
 }
 
@@ -62,6 +48,24 @@ body {
 	height: var(--game-window-height);
 	width: var(--game-window-width);
 	left: calc((100vw - var(--game-window-width)) / 2);
+}
+
+h1 {
+	position: absolute;
+	color: black;
+	font-size: 20px;
+	left: 10px;
+	top: 10px;
+	z-index: 22;
+}
+
+p {
+	position: absolute;
+	color: black;
+	font-size: 16px;
+	left: calc(var(--game-window-width) - 90px);
+	top: 10px;
+	z-index: 22;
 }
 
 .sky {
