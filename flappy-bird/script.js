@@ -1,32 +1,43 @@
 'use strict';
 
-const main = document.querySelector('.main');
-const groundOffset = document.querySelector('.ground').offsetTop;
+const main = document.querySelector('.game-board');
+const birdDom = document.querySelector('.bird');
 const scoreEle = document.querySelector('.score');
 const gameOverOverlay = document.querySelector('.overlay');
+const jumpBtn = document.querySelector('.jump');
+const retryBtn = document.querySelector('.retry');
 
-const windowWidth = 450;
-const windowHeight = 700;
-const skyHeight = 600;
-const groundHeight = 100;
+// variables initialised based on device
+let windowWidth,
+	windowHeight,
+	skyHeight,
+	groundHeight,
+	topCollisionDistance,
+	birdWidth,
+	birdHeight,
+	jumpHeight,
+	initialBirdPos,
+	pipeWidth,
+	pipeSpeed,
+	maxPipeLen,
+	minPipeLen,
+	gapBetweenPipe,
+	// game variables
 
-const birdHeight = 45;
-const birdWidth = 60;
-const jumpHeight = 50;
+	pipeDirectionToggle, // global variable to check pipes are created alternatively (top/bottom)
+	playing, // global variable to enable/disable animation
+	hitObstacle, // global variable to stop pipe movement on collision
+	bird, // main bird object
+	pipes, // init first 3 pipes for render: array
+	score;
 
-const pipeSpeed = 2;
-const maxPipeLen = 250;
-const minPipeLen = 220;
-const gapBetweenPipe = 200;
-
-// stop animation after 3000ms
-const stopAfterMs = 3000;
+// stop animation after
+const stopAfterMs = 2500;
 
 class Bird {
 	constructor(x, y) {
 		// init bird in the dom
-		this.birdDom = document.querySelector('.bird');
-		this.birdDom.style.left = `${x}px`;
+		this.birdDom = this.initBirdDom(x);
 
 		this.height = birdHeight;
 		this.width = birdWidth;
@@ -44,9 +55,16 @@ class Bird {
 		this.bounce = 0.3;
 	}
 
+	initBirdDom(x) {
+		birdDom.style.left = `${x}px`;
+		birdDom.style.width = `${birdWidth}px`;
+		birdDom.style.height = `${birdHeight}px`;
+		return birdDom;
+	}
+
 	jump() {
 		// check for top of screen for collision, if true then don't jump
-		if (this.y < 50) return;
+		if (this.y < topCollisionDistance) return;
 
 		// do not jump if obstacle is hit
 		if (hitObstacle) return;
@@ -71,10 +89,10 @@ class Bird {
 		this.bottom = this.y + this.height;
 
 		// if bird hits the bottom
-		if (this.bottom >= groundOffset) {
+		if (this.bottom >= skyHeight) {
 			// enable hitObstacle so pipes stop moving
 			hitObstacle = true;
-			this.y = groundOffset - this.height;
+			this.y = skyHeight - this.height;
 			this.bounceAndFall();
 		}
 	}
@@ -86,8 +104,12 @@ class Bird {
 		// display game over overlay
 		gameOverOverlay.style.display = 'block';
 
-		// disable animation after "stopAfterMs" ms
-		setTimeout(() => (playing = false), stopAfterMs);
+		// display retry button
+		// disable all animations after "stopAfterMs" ms
+		setTimeout(() => {
+			playing = false;
+			retryBtn.style.display = 'block';
+		}, stopAfterMs);
 	}
 
 	display() {
@@ -99,7 +121,7 @@ class Bird {
 class Pipe {
 	constructor(x, y, height) {
 		this.height = height;
-		this.width = 60;
+		this.width = pipeWidth;
 
 		// dimension as per getBoundingRect method
 		this.x = x; // left
@@ -146,8 +168,11 @@ class Pipe {
 			y: (bird.bottom - bird.y) / 2 + bird.y,
 		};
 
+		const birdWidthBy2 = birdWidth / 2;
+		const birdHeightBy2 = birdHeight / 2;
+
 		// increment score only if the pipe has not been passed
-		if (birdCenter.x + 30 > this.right && !this.passed) {
+		if (birdCenter.x + birdWidthBy2 > this.right && !this.passed) {
 			score += 1;
 			scoreEle.textContent = score;
 			this.passed = true;
@@ -155,20 +180,18 @@ class Pipe {
 
 		if (this.y === 0) {
 			// if top pipe
-			// 30 denotes the bird's width/2
-			// 23.5 denotes the bird's height/2
 			if (
-				birdCenter.x + 30 > this.x &&
-				birdCenter.y < this.bottom + 23.5 &&
-				birdCenter.x - 30 < this.right
+				birdCenter.x + birdWidthBy2 > this.x &&
+				birdCenter.y < this.bottom + birdHeightBy2 &&
+				birdCenter.x - birdWidthBy2 < this.right
 			)
 				return true;
 		} else {
 			// bottom pipe
 			if (
-				birdCenter.x + 30 > this.x &&
-				birdCenter.y + 23.5 > this.y &&
-				birdCenter.x - 30 < this.right
+				birdCenter.x + birdWidthBy2 > this.x &&
+				birdCenter.y + birdHeightBy2 > this.y &&
+				birdCenter.x - birdWidthBy2 < this.right
 			)
 				return true;
 		}
@@ -223,34 +246,6 @@ const initPipe = function (x) {
 	return pipe;
 };
 
-window.addEventListener('keyup', function (e) {
-	// for bird jump, jump only when playing
-	if (e.code === 'Space' && playing) bird.jump();
-	// restart game on enter by reloading page
-	else if (e.code === 'Enter' && !playing)
-		this.location.href = this.location.href;
-});
-
-// main
-
-// global variable to check pipes are created alternatively (top/bottom)
-let pipeDirectionToggle = true;
-
-// global variable to enable/disable animation
-let playing = true;
-
-// global variable to stop pipe movement on collision
-let hitObstacle = false;
-
-// score
-let score = 0;
-
-// init bird object
-const bird = new Bird(150, 200);
-
-// init first 3 pipes for render: array
-let pipes = initPipes();
-
 const draw = function () {
 	// render animation function
 
@@ -291,4 +286,72 @@ const draw = function () {
 	if (playing) window.requestAnimationFrame(draw);
 };
 
-draw();
+const init = function () {
+	const currWindowWidth = window.innerWidth;
+
+	if (currWindowWidth >= 480) {
+		// for larger screens
+
+		windowWidth = 450;
+		windowHeight = 700;
+		skyHeight = 600;
+		groundHeight = windowHeight - skyHeight;
+		topCollisionDistance = 50;
+
+		birdWidth = 60;
+		birdHeight = 45;
+		jumpHeight = 50;
+		initialBirdPos = { x: 150, y: 200 };
+
+		pipeWidth = 60;
+		pipeSpeed = 2;
+		maxPipeLen = 300;
+		minPipeLen = 180;
+		gapBetweenPipe = 180;
+	} else {
+		// for smaller screens
+
+		windowWidth = 350;
+		windowHeight = 544;
+		skyHeight = 466;
+		groundHeight = windowHeight - skyHeight;
+		topCollisionDistance = 40;
+
+		birdWidth = 45;
+		birdHeight = 34;
+		jumpHeight = 40;
+		initialBirdPos = { x: 120, y: 180 };
+
+		pipeWidth = 50;
+		pipeSpeed = 2;
+		maxPipeLen = 200;
+		minPipeLen = 120;
+		gapBetweenPipe = 140;
+	}
+
+	pipeDirectionToggle = true;
+	playing = true;
+	hitObstacle = false;
+	bird = new Bird(initialBirdPos.x, initialBirdPos.y);
+	pipes = initPipes();
+	score = 0;
+
+	// render game
+	draw();
+};
+
+window.addEventListener('keyup', function (e) {
+	if (e.code === 'Space' && playing) bird.jump();
+});
+
+jumpBtn.addEventListener('click', () => {
+	if (playing) bird.jump();
+});
+
+retryBtn.addEventListener('click', () => {
+	if (!playing) this.location.href = this.location.href;
+});
+
+// main
+
+init();

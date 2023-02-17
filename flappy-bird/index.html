@@ -9,17 +9,25 @@
 		<title>Flappy Bird</title>
 	</head>
 	<body>
-		<div class="border-left">
+		<div class="header">
 			<h1>Flappy Bird 🐤</h1>
-		</div>
-		<div class="main">
-			<div class="bird"></div>
-			<div class="sky"></div>
-			<div class="overlay">Game over! Press enter to restart!</div>
-			<div class="ground"></div>
-		</div>
-		<div class="border-right">
 			<p>Score: <span class="score">0</span></p>
+		</div>
+
+		<div class="main">
+			<div class="border-left"></div>
+
+			<div class="game-board">
+				<div class="bird"></div>
+				<div class="sky"></div>
+				<div class="overlay">Game over!</div>
+				<div class="ground">
+					<div class="jump"></div>
+					<div class="retry"></div>
+				</div>
+			</div>
+
+			<div class="border-right"></div>
 		</div>
 
 		<script src="script.js"></script>
