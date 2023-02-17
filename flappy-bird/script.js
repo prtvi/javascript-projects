@@ -31,7 +31,7 @@ let windowWidth,
 	score;
 
 // stop animation after
-const stopAfterMs = 2500;
+const stopAfterMs = 1100;
 
 class Bird {
 	constructor(x, y) {
@@ -100,11 +100,16 @@ class Bird {
 		// bounce effect on collision
 		this.acceleration = -(this.acceleration * this.bounce);
 
-		// display game over & restart overlay
-		displayRestart();
+		// after collision if the bird hits the ground
+		if (this.bottom >= skyHeight || this.bottom >= skyHeight) {
+			setTimeout(() => {
+				// disable all animations
+				playing = false;
 
-		// disable all animations after "stopAfterMs" ms
-		setTimeout(() => (playing = false), stopAfterMs);
+				// display game over & restart overlay
+				displayRestart();
+			}, stopAfterMs);
+		}
 	}
 
 	display() {
@@ -245,10 +250,8 @@ const displayRestart = function () {
 	overlay.innerHTML = 'Game over! <div class="retry"></div>';
 	overlay.style.display = 'block';
 
-	const retryBtn = overlay.querySelector('.retry');
-	retryBtn.addEventListener('click', () => {
-		if (!playing) location.reload();
-	});
+	const retry = document.querySelector('.retry');
+	retry.addEventListener('click', () => location.reload());
 };
 
 const draw = function () {
