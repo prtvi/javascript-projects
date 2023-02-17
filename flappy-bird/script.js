@@ -3,9 +3,8 @@
 const main = document.querySelector('.game-board');
 const birdDom = document.querySelector('.bird');
 const scoreEle = document.querySelector('.score');
-const gameOverOverlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.overlay');
 const jumpBtn = document.querySelector('.jump');
-const retryBtn = document.querySelector('.retry');
 
 // variables initialised based on device
 let windowWidth,
@@ -101,15 +100,11 @@ class Bird {
 		// bounce effect on collision
 		this.acceleration = -(this.acceleration * this.bounce);
 
-		// display game over overlay
-		gameOverOverlay.style.display = 'block';
+		// display game over & restart overlay
+		displayRestart();
 
-		// display retry button
 		// disable all animations after "stopAfterMs" ms
-		setTimeout(() => {
-			playing = false;
-			retryBtn.style.display = 'block';
-		}, stopAfterMs);
+		setTimeout(() => (playing = false), stopAfterMs);
 	}
 
 	display() {
@@ -246,6 +241,16 @@ const initPipe = function (x) {
 	return pipe;
 };
 
+const displayRestart = function () {
+	overlay.innerHTML = 'Game over! <div class="retry"></div>';
+	overlay.style.display = 'block';
+
+	const retryBtn = overlay.querySelector('.retry');
+	retryBtn.addEventListener('click', () => {
+		if (!playing) location.reload();
+	});
+};
+
 const draw = function () {
 	// render animation function
 
@@ -348,10 +353,11 @@ jumpBtn.addEventListener('click', () => {
 	if (playing) bird.jump();
 });
 
-retryBtn.addEventListener('click', () => {
-	if (!playing) this.location.href = this.location.href;
-});
-
 // main
 
-init();
+overlay.addEventListener('click', function () {
+	setTimeout(() => {
+		this.style.display = 'none';
+		init();
+	}, 300);
+});
