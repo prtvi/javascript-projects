@@ -1,3 +1,9 @@
+:root {
+	--border: 5px solid white;
+	--cell-size: 60px;
+	--board-size: calc((var(--cell-size) + 10px) * 4); /* +10px for border */
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,27 +17,27 @@ body {
 h1 {
 	text-align: center;
 	font-size: 80px;
-	margin: 40px 0 40px 0;
+	margin: 40px 0;
 }
 
 .grid {
-	width: 440px;
-	height: 440px;
-	border: 5px solid #fff;
+	width: var(--board-size);
+	height: var(--board-size);
+	border: var(--border);
+	border-radius: 4px;
 	color: #000;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 20px auto 20px auto;
+	margin: 0 auto;
 }
 
 .cell {
-	width: 100px;
-	height: 100px;
-	border: 5px solid white;
-	font-size: 50px;
-	line-height: 100px;
+	width: var(--cell-size);
+	height: var(--cell-size);
+	line-height: var(--cell-size);
+	font-size: calc(var(--cell-size) / 2);
+	border: var(--border);
 	text-align: center;
-	background-color: #d85627;
 }
 
 .control-board {
@@ -40,8 +46,18 @@ h1 {
 }
 
 .btn {
-	width: 50px;
-	height: 50px;
-	font-size: 25px;
+	width: calc(var(--cell-size) * 0.75);
+	height: calc(var(--cell-size) * 0.75);
+	font-size: calc(var(--cell-size) * 0.5);
 	cursor: pointer;
+}
+
+.btn-right {
+	margin-right: 30px;
+}
+
+@media screen and (min-width: 480px) {
+	:root {
+		--cell-size: 100px;
+	}
 }
