@@ -1,0 +1,50 @@
+:root {
+	--game-width: 350px;
+	--game-height: 544px;
+
+	--playarea-height: 480px;
+	--controls-height: calc(var(--game-height) - var(--playarea-height));
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.board {
+	position: relative;
+	height: var(--game-height);
+	width: var(--game-width);
+	background-color: wheat;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.brick {
+	position: absolute;
+	background-color: burlywood;
+	border: 1px solid black;
+	z-index: 20;
+}
+
+.ball {
+	position: absolute;
+	background-color: black;
+	border-radius: 35px;
+	z-index: 20;
+}
+
+.slider {
+	border-radius: 10px;
+	background-color: black;
+	position: absolute;
+	z-index: 20;
+}
+
+.controls {
+	background-color: #add1c5;
+	position: absolute;
+	top: var(--playarea-height);
+	width: var(--game-width);
+	height: var(--controls-height);
+}
