@@ -2,8 +2,8 @@
 	--game-width: 350px;
 	--game-height: 544px;
 
-	--playarea-height: 480px;
-	--controls-height: calc(var(--game-height) - var(--playarea-height));
+	--game-area-height: 480px;
+	--controls-height: calc(var(--game-height) - var(--game-area-height));
 }
 
 * {
@@ -20,10 +20,17 @@
 	margin-top: 30px;
 }
 
+.game-area {
+	position: absolute;
+	width: var(--game-width);
+	height: var(--game-area-height);
+	background-color: rgb(72, 68, 68);
+}
+
 .brick {
 	position: absolute;
 	background-color: burlywood;
-	border: 1px solid black;
+	border: 0.5px solid black;
 	z-index: 20;
 }
 
@@ -31,7 +38,7 @@
 	position: absolute;
 	background-color: black;
 	border-radius: 35px;
-	z-index: 20;
+	z-index: 21;
 }
 
 .slider {
@@ -44,7 +51,8 @@
 .controls {
 	background-color: #add1c5;
 	position: absolute;
-	top: var(--playarea-height);
+	top: var(--game-area-height);
 	width: var(--game-width);
 	height: var(--controls-height);
+	/* z-index: 25; */
 }
