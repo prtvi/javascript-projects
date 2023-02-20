@@ -2,6 +2,8 @@
 	--border: 5px solid white;
 	--cell-size: 60px;
 	--board-size: calc((var(--cell-size) + 10px) * 4); /* +10px for border */
+
+	--btn-left-offset: 10px;
 }
 
 * {
@@ -41,23 +43,48 @@ h1 {
 }
 
 .control-board {
-	width: fit-content;
-	margin: 60px auto 20px auto;
+	width: var(--board-size);
+	height: calc(var(--cell-size) * 1.65);
+	margin: 20px auto 20px auto;
+	position: relative;
 }
 
 .btn {
+	position: absolute;
 	width: calc(var(--cell-size) * 0.75);
 	height: calc(var(--cell-size) * 0.75);
 	font-size: calc(var(--cell-size) * 0.5);
 	cursor: pointer;
 }
 
+.btn-up {
+	left: calc(var(--board-size) / 2 - (var(--cell-size) * 0.75) / 2);
+}
+
+.btn-down {
+	left: calc(var(--board-size) / 2 - (var(--cell-size) * 0.75) / 2);
+	top: calc(var(--cell-size) * 0.75 + 5px);
+}
+
+.btn-left {
+	left: calc(
+		var(--board-size) / 2 - (var(--cell-size) * 0.75) / 2 - var(--cell-size) +
+			var(--btn-left-offset)
+	);
+	top: calc(var(--cell-size) * 0.75 + 5px);
+}
+
 .btn-right {
-	margin-right: 30px;
+	left: calc(
+		var(--board-size) / 2 - (var(--cell-size) * 0.75) / 2 + var(--cell-size) -
+			var(--btn-left-offset)
+	);
+	top: calc(var(--cell-size) * 0.75 + 5px);
 }
 
 @media screen and (min-width: 480px) {
 	:root {
 		--cell-size: 100px;
+		--btn-left-offset: 20px;
 	}
 }
