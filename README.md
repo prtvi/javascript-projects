@@ -17,3 +17,7 @@
 | 11  | Question?          | [Live Demo](https://prtvi.github.io/javascript-projects/question/index.html)        |
 | 12  | 2048               | [Live Demo](https://prtvi.github.io/javascript-projects/2048/index.html)            |
 | 13  | Flappy Bird        | [Live Demo](https://prtvi.github.io/javascript-projects/flappy-bird/index.html)     |
+
+## Other links
+
+Click [here](https://prtvi.github.io/allprojects.html) to check out my other projects
