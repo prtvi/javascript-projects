@@ -17,6 +17,7 @@
 | 11  | Question?          | [Live Demo](https://prtvi.github.io/javascript-projects/question/index.html)        |
 | 12  | 2048               | [Live Demo](https://prtvi.github.io/javascript-projects/2048/index.html)            |
 | 13  | Flappy Bird        | [Live Demo](https://prtvi.github.io/javascript-projects/flappy-bird/index.html)     |
+| 14  | Best UX            | [Live Demo](https://prtvi.github.io/javascript-projects/best-ux/index.html)         |
 
 ## Other links
 

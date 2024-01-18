@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Welcome to my best UX</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="container title">
+				<h1>Hassle free UX</h1>
+			</div>
+
+			<div class="container exp0">
+				<span>Tap around the bar to set the volume</span>
+				<div>
+					<input
+						type="range"
+						value="0"
+						min="0"
+						max="100"
+						step="1"
+						disabled
+					/>
+				</div>
+			</div>
+
+			<div class="container exp1">
+				<button>Change volume level</button>
+				<span>
+					Current volume level: <span class="value">40</span>%
+				</span>
+			</div>
+
+			<div class="container exp2">
+				<div>
+					<span>Resize the image to set the values</span>
+					<span>
+						<strong>Weight:</strong>
+						<span class="weight">50</span>kg
+					</span>
+					<span>
+						<strong>Height:</strong>
+						<span class="height">165</span>cm
+					</span>
+				</div>
+				<div class="input">
+					<img src="human.jpg" alt="human image" />
+				</div>
+			</div>
+
+			<!-- <div class="container exp3">
+				<div class="handle"></div>
+				<div class="handle-rod"></div>
+				<div class="base"></div>
+			</div> -->
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
