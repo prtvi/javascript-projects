@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-	margin: 60px 0 60px 0;
+	margin: 40px 0 40px 0;
 }
 .container.title {
 	text-align: center;
@@ -79,7 +79,6 @@ body {
 }
 
 /* EXP3 ------------------------------- */
-
 .exp3 {
 	border: 1px solid red;
 	display: flex;
@@ -100,4 +99,58 @@ body {
 	width: 40px;
 	height: 10px;
 	border: 1px solid black;
+}
+
+/* EXP4 ------------------------------- */
+.exp4 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.exp4 div:first-child {
+	margin-bottom: 20px;
+}
+
+/* EXP5 ------------------------------- */
+.exp5 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.exp5 div:first-child {
+	margin-bottom: 20px;
+}
+
+/* EXP6 ------------------------------- */
+
+.exp6 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.exp6 .text {
+	margin-bottom: 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.exp6 button {
+	margin-top: 10px;
+}
+.exp6 .input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.exp6 .input > div {
+	cursor: pointer;
+	border: 1px solid #ccf28e;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 3px;
 }

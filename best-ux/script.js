@@ -85,3 +85,48 @@ const exp2Observer = new MutationObserver(function () {
 	childList: true,
 	subtree: true,
 });
+
+// EXP4 ------------------------------------------------------------------------
+
+const exp4Span = document.querySelector('.exp4 span.value');
+const exp4Input = document.querySelector('.exp4 input');
+exp4Input.addEventListener(
+	'input',
+	() => (exp4Span.textContent = exp4Input.value)
+);
+
+// EXP5 ------------------------------------------------------------------------
+
+const exp5Numbers = document.getElementsByName('pnum');
+const exp5Span = document.querySelector('.exp5 span.value');
+
+[...exp5Numbers].forEach(ele => {
+	ele.addEventListener('input', function (e) {
+		let res = '';
+		[...exp5Numbers].forEach(e => (res += e.value));
+		exp5Span.textContent = res;
+	});
+});
+
+// EXP6 ------------------------------------------------------------------------
+
+const exp6Span = document.querySelector('.exp6 .text span.value');
+const exp6Inputs = document.querySelectorAll('.exp6 .input span');
+const genNew = document.querySelector('.exp6 button');
+
+genNew.addEventListener('click', generateRandomPhoneNumbers);
+
+[...exp6Inputs].forEach(inp => {
+	inp.textContent = Math.random().toString().slice(2, 12);
+
+	inp.addEventListener(
+		'click',
+		() => (exp6Span.textContent = inp.textContent)
+	);
+});
+
+function generateRandomPhoneNumbers() {
+	[...exp6Inputs].forEach(
+		inp => (inp.textContent = Math.random().toString().slice(2, 12))
+	);
+}
