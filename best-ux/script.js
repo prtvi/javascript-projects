@@ -112,9 +112,9 @@ const exp5Span = document.querySelector('.exp5 span.value');
 
 const exp6Span = document.querySelector('.exp6 .text span.value');
 const exp6Inputs = document.querySelectorAll('.exp6 .input span');
-const genNew = document.querySelector('.exp6 button');
+const exp6GenNewBtn = document.querySelector('.exp6 button');
 
-genNew.addEventListener('click', generateRandomPhoneNumbers);
+exp6GenNewBtn.addEventListener('click', generateRandomPhoneNumbers);
 
 [...exp6Inputs].forEach(inp => {
 	inp.textContent = Math.random().toString().slice(2, 12);
@@ -129,4 +129,84 @@ function generateRandomPhoneNumbers() {
 	[...exp6Inputs].forEach(
 		inp => (inp.textContent = Math.random().toString().slice(2, 12))
 	);
+}
+
+// EXP7s ------------------------------------------------------------------------
+
+const exp7GetNumCharsBtn = document.querySelector('.exp7 button.nChars');
+const exp7Output = document.querySelector('.exp7 div.output');
+
+const allChars = [
+	'A',
+	'B',
+	'C',
+	'D',
+	'E',
+	'F',
+	'G',
+	'H',
+	'I',
+	'J',
+	'K',
+	'L',
+	'M',
+	'N',
+	'O',
+	'P',
+	'Q',
+	'R',
+	'S',
+	'T',
+	'U',
+	'V',
+	'W',
+	'X',
+	'Y',
+	'Z',
+	' ',
+];
+
+function getRandomFromArr(arr) {
+	return arr[Math.floor(Math.random() * arr.length)];
+}
+
+exp7GetNumCharsBtn.addEventListener('click', () => {
+	exp7Output.innerHTML = '';
+	const title = document.createElement('span');
+	title.textContent = 'Your name:';
+	exp7Output.appendChild(title);
+	exp7Output.appendChild(generateTable(getRandomInt(1, 20)));
+});
+
+function generateTable(cols) {
+	const table = document.createElement('table');
+	const row0 = document.createElement('tr'); // for each letter
+	const row1 = document.createElement('tr'); // btn for each letter
+
+	for (let i = 0; i < cols; i++) {
+		// top row
+		const span = document.createElement('span');
+		span.textContent = 'A';
+
+		const td0 = document.createElement('td');
+		td0.appendChild(span);
+		row0.appendChild(td0);
+
+		// bottom row
+		const btn = document.createElement('span');
+		btn.textContent = '🎲';
+		btn.addEventListener(
+			'click',
+			() => (span.textContent = getRandomFromArr(allChars))
+		);
+
+		const td1 = document.createElement('td');
+		td1.appendChild(btn);
+		row1.appendChild(td1);
+	}
+
+	table.appendChild(row0);
+	table.appendChild(row1);
+
+	return table;
 }
