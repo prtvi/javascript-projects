@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+
+		<title>Image to ASCII</title>
+	</head>
+	<body>
+		<div class="output"></div>
+
+		<div class="input">
+			<div>
+				<button id="print">Print above result</button>
+			</div>
+
+			<div>
+				<h1>Image to ASCII</h1>
+				<p>Convert images into simple ASCII art.</p>
+
+				<div class="input-info-text">
+					<p>
+						Make sure the image width is within 250px for a perfect
+						A4 size print.
+					</p>
+					<p>
+						If your image size is beyond 250px, make sure you use
+						different page dimensions while printing.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<canvas id="canvas"></canvas>
+			</div>
+
+			<div>
+				<label for="input-image">Upload file:</label>
+				<input type="file" accept="image/*" id="input-image" />
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -18,6 +18,7 @@
 | 12  | 2048               | [Live Demo](https://prtvi.github.io/javascript-projects/2048/index.html)            |
 | 13  | Flappy Bird        | [Live Demo](https://prtvi.github.io/javascript-projects/flappy-bird/index.html)     |
 | 14  | Best UX            | [Live Demo](https://prtvi.github.io/javascript-projects/best-ux/index.html)         |
+| 15  | Image to ASCII     | [Live Demo](https://prtvi.github.io/javascript-projects/image-to-ascii/index.html)  |
 
 ## Other links
 

@@ -1,0 +1,42 @@
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+div.input {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+div.input > div {
+	margin-bottom: 10px;
+}
+
+div.output {
+	border: 25px solid black;
+}
+
+#print {
+	background-color: #adff2f;
+	border-radius: 3px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#canvas {
+	border: 1px solid #000000;
+}
+
+.output p {
+	font-family: monospace;
+	font-size: 5px;
+	line-height: 0;
+	letter-spacing: 2px;
+	white-space: nowrap;
+}
+
+.hidden {
+	display: none;
+}
